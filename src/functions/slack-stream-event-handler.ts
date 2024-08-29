@@ -35,8 +35,7 @@ const processSlackEventsEnv = (env: NodeJS.ProcessEnv) => ({
   OIDC_REDIRECT_URL: getOrThrowIfEmpty(env.OIDC_REDIRECT_URL),
   KMS_KEY_ARN: getOrThrowIfEmpty(env.KEY_ARN),
   Q_USER_API_ROLE_ARN: getOrThrowIfEmpty(env.Q_USER_API_ROLE_ARN),
-  GATEWAY_IDC_APP_ARN: getOrThrowIfEmpty(env.GATEWAY_IDC_APP_ARN),
-  CHATSTREAM_BUFFER_SIZE: getOrThrowIfEmpty(env.CHATSTREAM_BUFFER_SIZE)
+  GATEWAY_IDC_APP_ARN: getOrThrowIfEmpty(env.GATEWAY_IDC_APP_ARN)
 });
 
 export type SlackEventsEnv = ReturnType<typeof processSlackEventsEnv>;
@@ -369,7 +368,7 @@ export const handler = async (
   }
 
   let buffer = '';
-  const bufferSize = Number(slackEventsEnv.CHATSTREAM_BUFFER_SIZE)
+  const bufferSize = 50;
   let failedAttachmentEvents: FailedAttachmentEvent[] = [];
   let latestMetadataEvent: MetadataEvent = {}
   

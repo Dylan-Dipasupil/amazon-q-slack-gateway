@@ -350,8 +350,7 @@ export class MyAmazonQSlackBotStack extends cdk.Stack {
             OIDC_REDIRECT_URL: oidcCallbackApi.url,
             KEY_ARN: kmsKey.keyArn,
             Q_USER_API_ROLE_ARN: qUserAPIRole.roleArn,
-            GATEWAY_IDC_APP_ARN: env.GatewayIdCAppARN,
-            CHATSTREAM_BUFFER_SIZE: env.ChatStreamBufferSize
+            GATEWAY_IDC_APP_ARN: env.GatewayIdCAppARN
           },
           role: slackLambdaExecutionRole,
           vpc

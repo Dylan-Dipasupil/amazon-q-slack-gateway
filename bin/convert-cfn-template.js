@@ -226,12 +226,6 @@ function parameterizeTemplate(template, lambdas) {
       Type: 'String',
       AllowedPattern: '^arn:aws[a-zA-Z-]*:[a-zA-Z0-9-]*:[a-z0-9-]*:[0-9]{12}:[a-zA-Z0-9:/._-]+$',
       Description: 'Q Business Slack Gateway IdC App Arn'
-    },
-    ChatStreamBufferSize: {
-      Type: 'Number',
-      Default: 25,
-      MinValue: 1,
-      Description: 'Length of buffer size updates for ChatStream feature'
     }
   };
   for (let lambda of lambdas) {
