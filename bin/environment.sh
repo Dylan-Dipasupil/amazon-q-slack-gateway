@@ -84,7 +84,7 @@ jq -n \
     OIDCIdPName: $oidc_idp_name,
     OIDCClientId: $oidc_client_id,
     OIDCIssuerURL: $oidc_issuer_url,
-    GatewayIdCAppARN: $gateway_idc_app_arn
+    GatewayIdCAppARN: $gateway_idc_app_arn,
     ChatStreamBufferSize: $chatstream_buffer_size
   }' > "$json_file"
 

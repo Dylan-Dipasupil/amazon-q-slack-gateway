@@ -369,7 +369,7 @@ export const handler = async (
   }
 
   let buffer = '';
-  const bufferSize = 50;
+  const bufferSize = Number(slackEventsEnv.CHATSTREAM_BUFFER_SIZE)
   let failedAttachmentEvents: FailedAttachmentEvent[] = [];
   let latestMetadataEvent: MetadataEvent = {}
   
